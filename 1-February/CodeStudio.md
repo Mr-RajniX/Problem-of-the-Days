@@ -1,9 +1,9 @@
-## Problem of the Day - [<a href="https://www.codingninjas.com/codestudio/problems/check-if-one-string-is-a-rotation-of-another-string_1115683?leftPanelTab=0">Code Studio</a>]
+## Problem of the Day - [<a href="https://www.codingninjas.com/codestudio/problems/meta-strings_1089556">Code Studio</a>]
 
 
 #### ⭐<ins>Solution Codes</ins> -
 <pre>
-  ⭐Level : EASY - <a href="https://www.codingninjas.com/codestudio/problems/check-if-one-string-is-a-rotation-of-another-string_1115683?leftPanelTab=0">Check If One String Is A Rotation Of Another String</a>
+  ⭐Level : EASY - <a href="https://www.codingninjas.com/codestudio/problems/meta-strings_1089556">Meta Strings</a>
     bool checkMeta(string &s1, string &s2)
     {
         int s1_len = s1.length();
