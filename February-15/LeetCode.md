@@ -1,4 +1,4 @@
-## Problem of the Day - [<a href="https://leetcode.com/problems/add-to-array-form-of-integer/description"> 1071. Greatest Common Divisor of Strings </a>]
+## Problem of the Day - [<a href="https://leetcode.com/problems/add-to-array-form-of-integer/description"> 989. Add to Array-Form of Integer </a>]
 
 
 #### ⭐<ins>Solution Function Code</ins> -
