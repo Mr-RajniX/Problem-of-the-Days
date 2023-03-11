@@ -4,11 +4,11 @@
 #### ⭐<ins>Solution Function Code</ins> -
 <pre>
 
-    TreeNode* constructBST(ListNode *leftHead, ListNode *rightHead) {
+    TreeNode* constructBST(ListNode *leftHead, ListNode *rightHead){
         if (leftHead == rightHead)
             return nullptr;
         ListNode *slow = leftHead, *fast = leftHead;
-        while (fast != rightHead && fast -> next != rightHead) {
+        while (fast != rightHead && fast -> next != rightHead){
             slow = slow -> next;
             fast = fast -> next -> next;
         }
@@ -17,7 +17,7 @@
         root -> right = constructBST(slow -> next, rightHead);
         return root;
     }
-    TreeNode* sortedListToBST(ListNode* head) {
+    TreeNode* sortedListToBST(ListNode* head){
         if (head == nullptr)
             return nullptr;
         if (head -> next == nullptr) {
