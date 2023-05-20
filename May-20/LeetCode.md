@@ -1,5 +1,4 @@
-## Problem of the Day - [<a href="https://leetcode.com/problems/evaluate-division/"> 399. Evaluate Division
- </a>]
+## Problem of the Day - [<a href="https://leetcode.com/problems/evaluate-division/"> 399. Evaluate Division </a>]
 
 
 #### ⭐<ins>Solution Function Code #1</ins> -
