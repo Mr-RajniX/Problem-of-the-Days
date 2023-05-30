@@ -21,3 +21,23 @@
         return s[key];
     }
 </pre>
+#### ⭐<ins>Solution Function Code #2</ins> -
+<pre>
+
+  vector<bool> mp;    
+    MyHashSet() {
+        mp.resize(1000001, false);
+    }
+
+    void add(int key) {
+        mp[key] = true;
+    }
+
+    void remove(int key) {
+        mp[key] = false;
+    }
+
+    bool contains(int key) {
+        return mp[key];
+    }
+</pre>
