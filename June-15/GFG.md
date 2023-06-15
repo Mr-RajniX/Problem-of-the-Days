@@ -1,4 +1,4 @@
-## Problem of the Day - [<a href="https://practice.geeksforgeeks.org/problems/longest-palindrome-in-a-string3411/1"> 1146. Snapshot Array </a>]
+## Problem of the Day - [<a href="https://practice.geeksforgeeks.org/problems/longest-palindrome-in-a-string3411/1"> Longest Palindrome in a String </a>]
 
 
 #### ⭐<ins>Solution Function Code #1</ins> -
