@@ -14,3 +14,11 @@
         }return n+1;
     } 
 </pre>
+
+#### Solution : #2
+<pre>
+  int missingNumber(int arr[], int n) { 
+        unordered_set< int > s(arr, arr+n);
+        for(int i=1; i < n+2; i++) if (s.find(i)==s.end()) return i;
+    } 
+</pre>
