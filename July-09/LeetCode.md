@@ -1,6 +1,6 @@
 ### Problem of the day : [2272. Substring With Largest Variance](https://leetcode.com/problems/substring-with-largest-variance/)
 
-#### Solution :
+#### Solution : #1
 <pre>
   int largestVariance(string s) {
         vector< int > arr(26);
@@ -32,4 +32,30 @@
         }
         return ans;
     }
+</pre>
+
+#### Solution : #2
+<pre>
+  int largestVariance(string s) {
+    int res = 0;
+    unordered_set< char > unique(begin(s), end(s));
+    for (char a : unique)
+        for (char b : unique) {
+            int var = 0, has_b = 0, first_b = 0;
+            for (auto ch : s) {
+                var += ch == a;
+                if (ch == b) {
+                    has_b = true;
+                    if (first_b && var >= 0)
+                        first_b = false;
+                    else if (--var < 0) {
+                        first_b = true;
+                        var = -1;
+                    }
+                }
+                res = max(res, has_b ? var : 0);
+            }
+        }
+    return res;
+}
 </pre>
