@@ -19,3 +19,9 @@
         }return ans;
     }
 </pre>
+#### Solution #2 :
+<pre>
+    double myPow(double x, int n) {
+        return pow(x,n);
+    }
+</pre>
