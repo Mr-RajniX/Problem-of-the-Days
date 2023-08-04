@@ -2,24 +2,27 @@
 
 #### Solution :
 <pre>
-  bool solve(string &s, map< string,bool >& mp, int ind, string temp,map< pair< int,string >,bool >&dp){
-        if(ind == s.length() && temp == "") return true;
-        if(ind == s.length()) return false;
-        if(dp.find({ind,temp})!=dp.end()) return dp[{ind,temp}];
-        bool ans = false;
-        temp+=s[ind];
-        if(mp.find(temp)!=mp.end()){
-            ans = solve(s,mp,ind+1,"",dp);
+  class Solution {
+public:
+    bool wordBreak(std::string s, std::vector< std::string >& wordDict) {
+        int n = s.size();
+        std::vector< bool > dp(n + 1, false);
+        dp[0] = true;
+        int max_len = 0;
+        for (const auto& word : wordDict) {
+            max_len = std::max(max_len, static_cast< int >(word.size()));
         }
-        ans = ans || solve(s,mp,ind+1,temp,dp);
-        
-        return dp[{ind,temp}] = ans;
-    }
 
-    bool wordBreak(string s, vector< string >& wordDict) {
-        map< string,bool >mp;
-        map< pair< int,string >,bool > dp;
-        for(auto word: wordDict) mp[word] = true;
-        return solve(s,mp,0,"",dp);
+        for (int i = 1; i <= n; i++) {
+            for (int j = i - 1; j >= std::max(i - max_len - 1, 0); j--) {
+                if (dp[j] && std::find(wordDict.begin(), wordDict.end(), s.substr(j, i - j)) != wordDict.end()) {
+                    dp[i] = true;
+                    break;
+                }
+            }
+        }
+
+        return dp[n];
     }
+};
 </pre>
