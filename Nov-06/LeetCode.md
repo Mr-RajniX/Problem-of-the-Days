@@ -1,6 +1,6 @@
 #### Problem of the Day : [1845. Seat Reservation Manager](https://leetcode.com/problems/seat-reservation-manager/)
 
-#### Solution :
+#### Solution [TLE]:
 <pre>
     vector< bool> seats;
     int nextAvailableSeat;
@@ -30,5 +30,30 @@
                 }
             }
         }
+    }
+</pre>
+
+#### Solution :
+<pre>
+    priority_queue< int, vector< int>, greater< int>> seats;
+    int nextAvailableSeat;
+    SeatManager(int n) {
+        for (int i = 1; i <= n; i++) {
+            seats.push(i);
+        }
+    }
+    
+    int reserve() {
+        if (!seats.empty()) { 
+            int reservedSeat = seats.top(); 
+            seats.pop();
+            return reservedSeat; 
+        } else {
+            return -1; 
+        }
+    }
+    
+    void unreserve(int seatNumber) {
+        seats.push(seatNumber);
     }
 </pre>
